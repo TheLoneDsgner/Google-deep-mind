@@ -16,7 +16,7 @@
                 <!-- top bar links -->
                 <div class="header-content-left">
                     <div class="logo-and-menu">
-                        <div class="menu-icon" onclick=(showSidebar)>
+                        <div class="menu_icon" onclick=showSidebar()>
                             <a href="#">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path></svg>
                             </a>                        
@@ -91,9 +91,9 @@
             </div>
 
             <!-- sidebar links mobile -->
-            <div class="sidebar">
+            <div class="sidebar" onclick=hideSidebar()>
                 <div class="sidebar-content-left">
-                    <div class="brand-logo">
+                    <div class="brand-logo-mobile">
                         <a href="#">
                             <div class="logo-icon-wrapper">
                                 <img src="./assets/google-logo-png.webp" alt="">
@@ -310,7 +310,7 @@
                      </div>
 
                      <!-- Feature items -->
-                      <div class="feature-cards-items-container">
+                    <div class="feature-cards-items-container">
                         <div class="feature-items-card">
                             <div class="items-card-img images">
                                 <!-- img here -->
@@ -362,7 +362,7 @@
                                 </div>
                             </div>
                         </div>
-                      </div>
+                    </div>
                 </div>
            </div>
 
@@ -621,7 +621,7 @@
                                 <a href="#">About Google</a>
                             </div>
                             <div class="footer-link">
-                                <a href="#">About Google</a>
+                                <a href="#">Google products</a>
                             </div>
                             <div class="footer-link">
                                 <a href="#">Privacy</a>
@@ -637,15 +637,20 @@
               </div>
         
     </div>
-
-
-    <!-- script -->
-     <script>
-        function showSidebar(){
-            const sidebar = document.querySelector('.sidebar')
-            sidebar.style.display = 'now'
-        }
-     </script>
     
 </body>
+
+ <!-- script -->
+ <script>
+    function showSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'flex'
+    }
+
+    function hideSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'none'
+    }
+ </script>
+
 </html>
